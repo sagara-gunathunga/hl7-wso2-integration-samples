@@ -1,0 +1,11 @@
+<inboundEndpoint xmlns="http://ws.apache.org/ns/synapse"
+                    name="InboundHL7"
+                    sequence="inSeq"
+                    onError="fault"
+                    protocol="hl7"
+                    suspend="false">
+    <parameters>
+         <parameter name="inbound.hl7.Port">20000</parameter>
+         <parameter name="inbound.hl7.AutoAck">false</parameter>  
+    </parameters>
+</inboundEndpoint>

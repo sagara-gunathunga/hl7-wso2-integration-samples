@@ -1,0 +1,73 @@
+<internalApis>
+    <apis>
+        <api name="PrometheusApi" protocol="http" class="org.wso2.micro.integrator.prometheus.publisher.service.MetricAPI"/>
+        <api class="org.wso2.micro.integrator.management.apis.ManagementInternalApi" name="ManagementApi"
+             protocol="https">
+            <handlers>
+                <handler class="org.wso2.micro.integrator.management.apis.security.handler.JWTTokenSecurityHandler"
+                         name="JWTTokenSecurityHandler">
+                    <TokenStoreConfig>
+                        <MaxSize>200</MaxSize>
+                        <TokenCleanupTaskInterval>600</TokenCleanupTaskInterval><!--Seconds /-->
+                        <RemoveOldestTokenOnOverflow>true</RemoveOldestTokenOnOverflow>
+                    </TokenStoreConfig>
+                    <TokenConfig>
+                        <expiry>3600</expiry><!--Seconds /-->
+                        <size>2048</size>
+                    </TokenConfig>
+                    <UserStore>
+                        <users>
+                            <user>
+                                <username>admin</username>
+                                <password>sagara</password>
+                            </user>
+                        </users>
+                    </UserStore>
+                </handler>
+                <!--handler class="org.wso2.micro.integrator.management.apis.security.handler.BasicSecurityHandler"
+                         name="BasicSecurityHandler">
+                    <UserStore>
+                        <users>
+                            <user>
+                                <username>admin</username>
+                                <password>admin</password>
+                            </user>
+                        </users>
+                    </UserStore>
+                </handler-->
+            </handlers>
+            <cors>
+                <enabled>true</enabled>
+                <allowedOrigins>*</allowedOrigins>
+                <!-- comma separated values-->
+                <allowedHeaders>Authorization</allowedHeaders>
+            </cors>
+        </api>
+    </apis>
+    <sslConfig>
+        <parameter name="keystore">
+            <KeyStore>
+                <Location>repository/resources/security/wso2carbon.jks</Location>
+                <Type>JKS</Type>
+                <Password>wso2carbon</Password>
+                <KeyPassword>wso2carbon</KeyPassword>
+            </KeyStore>
+        </parameter>
+        <parameter name="truststore">
+            <TrustStore>
+                <Location>repository/resources/security/client-truststore.jks</Location>
+                <Type>JKS</Type>
+                <Password>wso2carbon</Password>
+            </TrustStore>
+        </parameter>
+        <parameter name="sslVerifyClient">false</parameter>
+        <parameter name="httpsProtocols">TLSv1,TLSv1.1,TLSv1.2</parameter>
+        <parameter name="sslProtocol">SSLV3</parameter>
+        <parameter name="certificateRevocationVerifier">
+            <CertificateRevocationVerifier enable="false">
+                <CacheSize>10</CacheSize>
+                <CacheDelay>2</CacheDelay>
+            </CertificateRevocationVerifier>
+        </parameter>
+    </sslConfig>
+</internalApis>

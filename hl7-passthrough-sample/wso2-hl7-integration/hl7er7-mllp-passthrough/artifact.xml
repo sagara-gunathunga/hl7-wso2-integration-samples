@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="Hello" groupId="com.example.hl7er7-mllp-passthrough.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/Hello.xml</file>
+    </artifact>
+    <artifact name="hl7Testproxy" groupId="com.example.hl7er7-mllp-passthrough.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/hl7Testproxy.xml</file>
+    </artifact>
+    <artifact name="InboundHL7" groupId="com.example.hl7er7-mllp-passthrough.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/InboundHL7.xml</file>
+    </artifact>
+    <artifact name="inSeq" groupId="com.example.hl7er7-mllp-passthrough.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/inSeq.xml</file>
+    </artifact>
+    <artifact name="reciveSeq" groupId="com.example.hl7er7-mllp-passthrough.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/reciveSeq.xml</file>
+    </artifact>
+    <artifact name="faultSeq" groupId="com.example.hl7er7-mllp-passthrough.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/faultSeq.xml</file>
+    </artifact>
+</artifacts>

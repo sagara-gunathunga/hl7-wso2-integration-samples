@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/hello" name="Hello" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/{msg}">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>
+					{
+					"message": "$1"
+					}
+				</format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:uri.var.msg "/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
