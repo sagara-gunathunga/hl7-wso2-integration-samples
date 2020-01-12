@@ -51,6 +51,7 @@ Running WSO2 Micro Integration using Docker.
 HTTP URL : POST http://localhost:8290/services/hl7Testproxy
 Content-Type : application/edi-hl7
 
+`curl -v -N -H "Content-Type : application/edi-hl7" -d "MSH|^~\&|||||20200113103350.823+1300||ADT^A01^ADT_A01|1901|T|2.4" http://localhost:8290/services/hl7Testproxy`
 
 
 
