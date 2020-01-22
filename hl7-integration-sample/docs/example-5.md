@@ -1,10 +1,11 @@
-# Asynchronous delivery of HL7 messages over MLLP protocol using WSO2 Message Store and Message Processors. 
+# Asynchronous delivery of HL7 messages over MLLP protocol using WSO2 Message Store and Message Processors with acknowledgement processing. 
 
-This samples demonstrates asynchronous HL7 messages delivery over MLLP protocol in an and
- implemented using WSO2 Message Store and Message Processors. Once the WSO2 EI received 
- the messages, it immediately acknowledge the frontend application and store the message
-  internally to send it in a reliable manner. After the successful  delivery to the 
-  backend HL7 message is removed from the internal store
+This samples demonstrates asynchronous HL7 messages delivery over MLLP protocol in an and implemented using WSO2 Message 
+Store and Message Processors. Once the WSO2 EI received the messages, it immediately acknowledge the frontend application
+and store the message internally to send it in a reliable manner.  
+ 
+After the successful  delivery to the backend HL7 message is removed from the internal store and the HL7 acknowledgement 
+from the backend is redirect to a integration sequence for further processing.   
 
 ![Passthrough HL7 messages over MLLP protocol using a proxy service ](images/case-2.png)
 
@@ -22,7 +23,7 @@ NOTE: Due to a limitation of handling HL7 acknowledgement this sample use custom
 
 
 
-* Start HAPI TestPanel and create a new connection for port 9393 and send a sample message. 
+* Start HAPI TestPanel and create a new connection for port 9494 and send a sample message. 
 
 ![Sending a message to HL7 InboundEndpoint ](images/2.png?raw=true)
 
