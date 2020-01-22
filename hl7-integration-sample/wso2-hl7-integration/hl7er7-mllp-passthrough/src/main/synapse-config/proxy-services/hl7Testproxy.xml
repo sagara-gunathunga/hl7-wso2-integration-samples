@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="hl7Testproxy" startOnLoad="true" transports="http, hl7" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_9CB8D06C91A1E996796270828144799-1418795938">
+            <address uri="$SYSTEM:HL7_BE_URL"/>
+        </endpoint>
+        <inSequence>
+            <property name="HL7_APPLICATION_ACK" value="true" scope="axis2"/>
+            <log level="custom">
+                <property name="INFO" value="********************************* IN FLOW ******** "/>
+                <property expression="get-property('axis2','HL7_RAW_MESSAGE')" name="HL7 RAW MESSAGE" xmlns:ns="http://org.apache.synapse/xsd"/>
+            </log>
+            <log level="full"/>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="INFO" value="********************************* OUT FLOW ******** "/>
+            </log>
+            <log level="full"/>
+            <property name="HL7_RESULT_MODE" value="ACK" scope="axis2" />
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+    <parameter name="transport.hl7.Port">9292</parameter>
+    <parameter name="transport.hl7.AutoAck">false</parameter>
+</proxy>

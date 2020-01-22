@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="hl7BackendEp" xmlns="http://ws.apache.org/ns/synapse">
+    <address uri="$SYSTEM:HL7_BE_URL"/>
+</endpoint>
+
+    
+    
+    
+    
+    

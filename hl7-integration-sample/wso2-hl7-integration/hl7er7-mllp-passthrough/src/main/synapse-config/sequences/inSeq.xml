@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="inSeq">
+    <property name="HL7_APPLICATION_ACK" value="true" scope="axis2"/> 
+    <log level="custom">
+                <property name="INFO" value="*********************************"/>
+                <property xmlns:ns="http://org.apache.synapse/xsd" expression="get-property('axis2','HL7_RAW_MESSAGE')" name="RAW HL7 MESSAGE"/>
+    </log>
+    <send receive="reciveSeq">
+        <endpoint name="endpoint_urn_uuid_9CB8D06C91A1E996796270828144799-1418795938">
+            <address uri="$SYSTEM:HL7_BE_URL"/>
+        </endpoint>
+    </send>
+</sequence>
