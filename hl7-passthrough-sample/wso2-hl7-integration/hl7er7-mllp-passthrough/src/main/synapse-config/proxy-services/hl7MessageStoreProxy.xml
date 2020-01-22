@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="hl7MessageStoreProxy" startOnLoad="true" transports="hl7" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+        <log level="custom">
+            <property name="INFO" value="********************************* IN FLOW ******** "/>
+            <property name="INFO" value="********************************* Storing the message... ***** "/>
+            <property expression="get-property('axis2','HL7_RAW_MESSAGE')" name="HL7_RAW_MESSAGE " xmlns:ns="http://org.apache.synapse/xsd"/>
+            </log>
+          <store messageStore="hl7MessageStore"/>
+      </inSequence>
+    </target>
+    <parameter name="transport.hl7.Port">9393</parameter>
+    <parameter name="transport.hl7.AutoAck">true</parameter>
+</proxy>

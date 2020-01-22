@@ -28,3 +28,19 @@ class = "org.wso2.carbon.business.messaging.hl7.transport.HL7TransportListener"
 [[custom_transport.sender]]
 protocol = "hl7"
 class = "org.wso2.carbon.business.messaging.hl7.transport.HL7TransportSender"
+
+[[custom_message_formatters.blocking]]
+content_type = "application/edi-hl7"
+class = "org.wso2.carbon.business.messaging.hl7.message.HL7MessageFormatter"
+
+[[custom_message_builders.blocking]]
+content_type = "application/edi-hl7"
+class = "org.wso2.carbon.business.messaging.hl7.message.HL7MessageBuilder"
+
+[[custom_transport.blocking.listener]]
+protocol = "hl7"
+class = "org.wso2.carbon.business.messaging.hl7.transport.HL7TransportListener"
+
+[[custom_transport.blocking.sender]]
+protocol = "hl7"
+class = "org.wso2.carbon.business.messaging.hl7.transport.HL7TransportSender"
