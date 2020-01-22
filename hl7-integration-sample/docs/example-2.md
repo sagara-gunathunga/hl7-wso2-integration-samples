@@ -1,4 +1,4 @@
-# Passthrough HL7 messages over MLLP protocol using a proxy service
+# Passthrough HL7 messages over HTTP protocol using a proxy service
 
 This samples demonstrates passthrough HL7 messages over MLLP protocol and implemented as proxy service on WSO2 Micro Integrator 7.0. 
 
@@ -14,9 +14,18 @@ This samples demonstrates passthrough HL7 messages over MLLP protocol and implem
 
 
 
-* Start HAPI TestPanel and create a new connection for port 9292 and send a sample message. 
+* Start HAPI TestPanel and create a new connection for port 20000 and send a sample message. 
 
-![Sending a message to HL7 InboundEndpoint ](images/2.png?raw=true)
+Send a HL7 message over HTTP transport using a HTTP client such as cURL or Postman. 
+
+* HTTP URL : POST http://localhost:8290/services/hl7Testproxy
+* Content-Type : application/edi-hl7
+
+```
+
+curl -v -N -H "Content-Type : application/edi-hl7" -d "MSH|^~\&|||||20200113103350.823+1300||ADT^A01^ADT_A01|1901|T|2.4" http://localhost:8290/services/hl7PassthroughProxy
+
+```
 
 
 * In case if you have used receiving connection in the HAPI TestPanel, you should able to see the received message in the 

@@ -1,6 +1,6 @@
-# Passthrough HL7 messages over MLLP protocol using a proxy service
+# Passthrough HL7 messages over MLLP protocol using a Inbound Endpoint
 
-This samples demonstrates passthrough HL7 messages over MLLP protocol and implemented as proxy service on WSO2 Micro Integrator 7.0. 
+This samples demonstrates passthrough HL7 messages over MLLP protocol and implemented as a InboundEndpoint on WSO2 Micro Integrator 7.0. 
 
 ![Passthrough HL7 messages over MLLP protocol using a proxy service ](images/case-1.png)
 
@@ -14,7 +14,7 @@ This samples demonstrates passthrough HL7 messages over MLLP protocol and implem
 
 
 
-* Start HAPI TestPanel and create a new connection for port 9292 and send a sample message. 
+* Start HAPI TestPanel and create a new connection for port 20000 and send a sample message. 
 
 ![Sending a message to HL7 InboundEndpoint ](images/2.png?raw=true)
 
