@@ -2,14 +2,17 @@
     <artifact name="healthAPI" groupId="com.example.hl7.integration.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/healthAPI.xml</file>
     </artifact>
-    <artifact name="hl7Testproxy" groupId="com.example.hl7.integration.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/proxy-services/hl7Testproxy.xml</file>
+    <artifact name="hl7PassthroughProxy" groupId="com.example.hl7.integration.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/hl7PassthroughProxy.xml</file>
+    </artifact>
+    <artifact name="hl7MessageStoreWithReplyProxy" groupId="com.example.hl7.integration.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/hl7MessageStoreWithReplyProxy.xml</file>
     </artifact>
     <artifact name="hl7MessageStoreProxy" groupId="com.example.hl7.integration.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/hl7MessageStoreProxy.xml</file>
     </artifact>
-    <artifact name="InboundHL7" groupId="com.example.hl7.integration.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/inbound-endpoints/InboundHL7.xml</file>
+    <artifact name="hl7PassthroughInboundEP" groupId="com.example.hl7.integration.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/hl7PassthroughInboundEP.xml</file>
     </artifact>
     <artifact name="inSeq" groupId="com.example.hl7.integration.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/inSeq.xml</file>
@@ -20,11 +23,20 @@
     <artifact name="faultSeq" groupId="com.example.hl7.integration.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/faultSeq.xml</file>
     </artifact>
+    <artifact name="messageProcessorReplySeq" groupId="com.example.hl7.integration.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/messageProcessorReplySeq.xml</file>
+    </artifact>
     <artifact name="hl7MessageStore" groupId="com.example.hl7.integration.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/message-stores/hl7MessageStore.xml</file>
     </artifact>
+    <artifact name="hl7MessageWithReplyStore" groupId="com.example.hl7.integration.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/hl7MessageWithReplyStore.xml</file>
+    </artifact>
     <artifact name="hl7MessageProcessor" groupId="com.example.hl7.integration.message-processors" version="1.0.0" type="synapse/message-processors" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/message-processors/hl7MessageProcessor.xml</file>
+    </artifact>
+    <artifact name="hl7MessageProcessorWithReply" groupId="com.example.hl7.integration.message-processors" version="1.0.0" type="synapse/message-processors" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-processors/hl7MessageProcessorWithReply.xml</file>
     </artifact>
     <artifact name="hl7BackendEp" groupId="com.example.hl7.integration.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/hl7BackendEp.xml</file>

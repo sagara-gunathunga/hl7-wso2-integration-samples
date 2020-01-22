@@ -1,5 +1,5 @@
 <inboundEndpoint xmlns="http://ws.apache.org/ns/synapse"
-                    name="InboundHL7"
+                    name="hl7PassthroughInboundEP"
                     sequence="inSeq"
                     onError="fault"
                     protocol="hl7"
