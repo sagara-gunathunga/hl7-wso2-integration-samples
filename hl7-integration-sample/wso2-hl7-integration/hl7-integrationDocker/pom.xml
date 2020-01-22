@@ -47,11 +47,13 @@
       <artifactId>org.wso2.carbon.business.messaging.hl7.transport</artifactId>
       <version>4.6.6</version>
     </dependency>
-    <dependency>
-      <groupId>com.integrationworks.hl7.extension</groupId>
-      <artifactId>hl7-transport-extension</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
+    <!-- ATM this is not hosted anywhere hence use  Jar file -->
+<!--    <dependency>-->
+<!--      <groupId>com.integrationworks.hl7.extension</groupId>-->
+<!--      <artifactId>hl7-transport-extension</artifactId>-->
+<!--      <version>1.0.0-SNAPSHOT</version>-->
+<!--    </dependency>-->
+
   </dependencies>
   <repositories>
     <repository>
