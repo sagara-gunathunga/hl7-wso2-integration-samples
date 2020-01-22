@@ -26,7 +26,7 @@ These samples demonstrate the following integration scenarios related to HL7 usi
 The following commands build both Java-based HL7 backend server and WSO2 Integration samples, and package them as Docker images.  
 
 
-**Building the sample backend
+Building the sample backend
 ```
 
 cd hl7-passthrough-sample/hl7backend
@@ -36,7 +36,7 @@ mvn clean install
 ```
 
 
-**Building the WSO2 EI (MI) with integration flows. 
+Building the WSO2 EI (MI) with integration flows. 
 
 ```
 
