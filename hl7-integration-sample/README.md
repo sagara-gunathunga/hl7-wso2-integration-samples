@@ -29,7 +29,7 @@ The following commands build both Java-based HL7 backend server and WSO2 Integra
 Building the sample backend
 ```
 
-cd hl7-passthrough-sample/hl7backend
+cd hl7backend
 
 mvn clean install
 
@@ -40,7 +40,7 @@ Building the WSO2 EI (MI) with integration flows.
 
 ```
 
-cd hl7-passthrough-sample/wso2-hl7-integration
+cd wso2-hl7-integration
 
 mvn clean install
 
