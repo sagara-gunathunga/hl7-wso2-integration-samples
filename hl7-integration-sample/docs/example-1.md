@@ -10,7 +10,7 @@ This samples demonstrates passthrough HL7 messages over MLLP protocol and implem
 
 
 
-## How to Run and Test
+## How to Test
 
 
 
