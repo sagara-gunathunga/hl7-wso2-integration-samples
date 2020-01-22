@@ -14,9 +14,7 @@ This samples demonstrates passthrough HL7 messages over MLLP protocol and implem
 
 
 
-* Start HAPI TestPanel and create a new connection for port 20000 and send a sample message. 
-
-Send a HL7 message over HTTP transport using a HTTP client such as cURL or Postman. 
+* Send a HL7 message over HTTP transport using a HTTP client such as cURL or Postman. 
 
 * HTTP URL : POST http://localhost:8290/services/hl7Testproxy
 * Content-Type : application/edi-hl7
