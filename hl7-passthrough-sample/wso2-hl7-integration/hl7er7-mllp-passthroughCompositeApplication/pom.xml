@@ -14,6 +14,7 @@
   <packaging>carbon/application</packaging>
 
   <properties>
+    <com.example.hl7er7-mllp-passthrough.api_._healthAPI>capp/EnterpriseServiceBus</com.example.hl7er7-mllp-passthrough.api_._healthAPI>
     <com.example.hl7er7-mllp-passthrough.proxy-service_._hl7Testproxy>capp/EnterpriseServiceBus</com.example.hl7er7-mllp-passthrough.proxy-service_._hl7Testproxy>
     <com.example.hl7er7-mllp-passthrough.proxy-service_._hl7MessageStoreProxy>capp/EnterpriseServiceBus</com.example.hl7er7-mllp-passthrough.proxy-service_._hl7MessageStoreProxy>
     <com.example.hl7er7-mllp-passthrough.api_._Hello>capp/EnterpriseServiceBus</com.example.hl7er7-mllp-passthrough.api_._Hello>
@@ -30,7 +31,7 @@
   <dependencies>
     <dependency>
       <groupId>com.example.hl7er7-mllp-passthrough.api</groupId>
-      <artifactId>Hello</artifactId>
+      <artifactId>healthAPI</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

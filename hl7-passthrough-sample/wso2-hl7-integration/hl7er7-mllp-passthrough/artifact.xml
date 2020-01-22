@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="Hello" groupId="com.example.hl7er7-mllp-passthrough.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/api/Hello.xml</file>
+    <artifact name="healthAPI" groupId="com.example.hl7er7-mllp-passthrough.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/healthAPI.xml</file>
     </artifact>
     <artifact name="hl7Testproxy" groupId="com.example.hl7er7-mllp-passthrough.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/hl7Testproxy.xml</file>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/health" name="healthAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/{msg}">
+        <inSequence>
+            <payloadFactory>
+                <format>
+
+                    <hl7:message xmlns:hl7="http://wso2.org/hl7">
+                        <ADT_A01 xmlns="urn:hl7-org:v2xml">
+                            <MSH>
+                                <MSH.1>|</MSH.1>
+                                <MSH.2>^~\&amp;</MSH.2>
+                                <MSH.7>
+                                    <TS.1>20200117153840.693+1300</TS.1>
+                                </MSH.7>
+                                <MSH.9>
+                                    <MSG.1>ADT</MSG.1>
+                                    <MSG.2>A01</MSG.2>
+                                    <MSG.3>ADT_A01</MSG.3>
+                                </MSH.9>
+                                <MSH.10>3101</MSH.10>
+                                <MSH.11>
+                                    <PT.1>T</PT.1>
+                                </MSH.11>
+                                <MSH.12>
+                                    <VID.1>2.4</VID.1>
+                                </MSH.12>
+                            </MSH>
+                        </ADT_A01>
+                    </hl7:message>
+                </format>
+                <args>
+
+                </args>
+            </payloadFactory>
+            <property name="messageType" value="application/edi-hl7" scope="axis2"/>
+            <send>
+                <endpoint>
+                    <address uri="$SYSTEM:HL7_BE_URL"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <property name="messageType" value="application/json" scope="axis2"/>
+            <send/>
+        </outSequence>
+
+        <faultSequence/>
+    </resource>
+</api>
+
