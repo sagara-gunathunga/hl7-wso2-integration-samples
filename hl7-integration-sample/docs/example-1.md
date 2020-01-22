@@ -6,7 +6,7 @@ This samples demonstrates passthrough HL7 messages over MLLP protocol and implem
 
 ## Prerequisites
 
-* Build and run the sample backends and integration flows as described here. 
+* Build and run the sample backends and integration flows as described  [here.](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/README.md#how-to-build)
 
 
 
