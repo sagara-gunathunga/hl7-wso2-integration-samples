@@ -4,13 +4,13 @@
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.example.hl7er7-mllp-passthrough</groupId>
-	<artifactId>wso2-mi-hl7er7-mllp-passthrough-sample</artifactId>
+	<groupId>com.example.hl7.integration</groupId>
+	<artifactId>wso2-hl7-integration</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>hl7er7-mllp-passthrough</module>
-		<module>hl7er7-mllp-passthroughCompositeApplication</module>
-		<module>wso2-mi-hl7er7-mllp-passthroughDocker</module>
+		<module>hl7-integration</module>
+		<module>hl7-integrationCompositeApplication</module>
+		<module>hl7-integrationDocker</module>
 	</modules>
 </project>

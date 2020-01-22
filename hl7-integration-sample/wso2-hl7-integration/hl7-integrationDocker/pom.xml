@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.example.hl7er7-mllp-passthrough</groupId>
-    <artifactId>wso2-mi-hl7er7-mllp-passthrough-sample</artifactId>
+    <groupId>com.example.hl7.integration</groupId>
+    <artifactId>wso2-hl7-integration</artifactId>
     <version>1.0.0</version>
   </parent>
-  <groupId>com.example.hl7er7-mllp-passthrough</groupId>
-  <artifactId>wso2-mi-hl7er7-mllp-passthroughDocker</artifactId>
+  <groupId>com.example.hl7.integration</groupId>
+  <artifactId>hl7-integrationDockerr</artifactId>
   <version>1.0.0</version>
 
   <properties>
@@ -17,8 +17,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.example.hl7er7-mllp-passthrough</groupId>
-      <artifactId>hl7er7-mllp-passthroughCompositeApplication</artifactId>
+      <groupId>com.example.hl7.integration</groupId>
+      <artifactId>hl7-integrationCompositeApplicatio</artifactId>
       <version>1.0.0</version>
       <type>car</type>
     </dependency>
@@ -126,7 +126,7 @@
               <overWriteSnapshots>false</overWriteSnapshots>
               <overWriteIfNewer>true</overWriteIfNewer>
               <excludeTransitive>true</excludeTransitive>
-              <excludeArtifactIds>hl7er7-mllp-passthroughCompositeApplication</excludeArtifactIds>
+              <excludeArtifactIds>hl7-integrationCompositeApplicatio</excludeArtifactIds>
             </configuration>
           </execution>
         </executions>
@@ -144,7 +144,7 @@
               <goal>build</goal>
             </goals>
             <configuration>
-              <repository>hl7-samples/integration</repository>
+              <repository>hl7-samples/wso2-integration</repository>
             </configuration>
           </execution>
         </executions>

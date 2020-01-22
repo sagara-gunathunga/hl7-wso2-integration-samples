@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.example.hl7er7-mllp-passthrough</groupId>
-        <artifactId>wso2-mi-hl7er7-mllp-passthrough-sample</artifactId>
+        <groupId>com.example.hl7.integration</groupId>
+        <artifactId>wso2-hl7-integration</artifactId>
         <version>1.0.0</version>
     </parent>
-    <groupId>com.example.hl7er7-mllp-passthrough</groupId>
-    <artifactId>hl7er7-mllp-passthrough</artifactId>
+    <groupId>com.example.hl7.integration</groupId>
+    <artifactId>hl7-integratio</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
