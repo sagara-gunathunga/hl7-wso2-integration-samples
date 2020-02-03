@@ -91,7 +91,7 @@ Use one of the steps to test each scenario.
 
 * [Passthrough HL7 messages over HTTP protocol using a proxy service](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-2.md)
 
-* [Passthrough HL7 messages over MLLP protocol using a Inbound Endpoint](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-3.md)
+* [Passthrough HL7 messages over MLLP protocol using an Inbound Endpoint](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-3.md)
 
 
 * [Asynchronous delivery of HL7 messages over MLLP protocol using WSO2 Message Store and Message Processors](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-4.md)
