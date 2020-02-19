@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="hl7TransformationProxy"
+       transports="hl7"
+       startOnLoad="true">
+    <description/>
+    <target>
+        <endpoint>
+            <address uri="$SYSTEM:HL7_BE_URL"/>
+        </endpoint>
+        <inSequence>
+            <property name="HL7_APPLICATION_ACK" value="true" scope="axis2"/>
+            <log level="custom">
+                <property name="INFO"
+                          value="********************************* Before Transformation ******** "/>
+            </log>
+            <log level="full"/>
+            <xslt key="hl723-tohl724-basic.xslt"/>
+            <log level="custom">
+                <property name="INFO"
+                          value="********************************* After Transformation ******** "/>
+            </log>
+            <log level="full"/>
+        </inSequence>
+        <outSequence>
+            <log level="custom">
+                <property name="INFO"
+                          value="********************************* OUT FLOW ******** "/>
+            </log>
+            <log level="full"/>
+            <xslt key="hl724-tohl723-basic-response.xslt"/>
+            <log level="full"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+    <parameter name="transport.hl7.Port">9595</parameter>
+    <parameter name="transport.hl7.AutoAck">false</parameter>
+</proxy>
+
+

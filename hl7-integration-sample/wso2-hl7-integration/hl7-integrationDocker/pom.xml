@@ -47,6 +47,11 @@
       <artifactId>org.wso2.carbon.business.messaging.hl7.transport</artifactId>
       <version>4.6.6</version>
     </dependency>
+    <dependency>
+      <groupId>ca.uhn.hapi</groupId>
+      <artifactId>hapi-hl7overhttp</artifactId>
+      <version>2.1</version>
+    </dependency>
     <!-- ATM this is not hosted anywhere hence use  Jar file -->
 <!--    <dependency>-->
 <!--      <groupId>com.integrationworks.hl7.extension</groupId>-->
@@ -112,7 +117,8 @@
                 org.wso2.carbon.business.messaging.hl7.store,
                 org.wso2.carbon.business.messaging.hl7.store.ui,
                 org.wso2.carbon.business.messaging.hl7.transport,
-                hl7-transport-extension
+                hl7-transport-extension,
+                hapi-hl7overhttp
               </excludeArtifactIds>
             </configuration>
           </execution>

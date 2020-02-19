@@ -11,6 +11,9 @@
     <artifact name="hl7MessageStoreProxy" groupId="com.example.hl7.integration.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/hl7MessageStoreProxy.xml</file>
     </artifact>
+    <artifact name="hl7TransformationProxy" groupId="com.example.hl7.integration.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/hl7TransformationProxy.xml</file>
+    </artifact>
     <artifact name="hl7PassthroughInboundEP" groupId="com.example.hl7.integration.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/inbound-endpoints/hl7PassthroughInboundEP.xml</file>
     </artifact>
@@ -41,5 +44,12 @@
     <artifact name="hl7BackendEp" groupId="com.example.hl7.integration.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/hl7BackendEp.xml</file>
     </artifact>
+    <artifact name="hl723-tohl724-basic.xslt" groupId="com.example.hl7.integration.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/hl723-tohl724-basic.xslt.xml</file>
+    </artifact>
+    <artifact name="hl724-tohl723-basic-response.xslt" groupId="com.example.hl7.integration.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/hl724-tohl723-basic-response.xslt.xml</file>
+    </artifact>
+
 
 </artifacts>

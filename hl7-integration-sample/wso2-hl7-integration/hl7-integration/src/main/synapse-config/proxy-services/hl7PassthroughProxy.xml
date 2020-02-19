@@ -17,7 +17,6 @@
                 <property name="INFO" value="********************************* OUT FLOW ******** "/>
             </log>
             <log level="full"/>
-            <property name="HL7_RESULT_MODE" value="ACK" scope="axis2" />
             <send/>
         </outSequence>
         <faultSequence/>

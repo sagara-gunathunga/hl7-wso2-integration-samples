@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry xmlns="http://ws.apache.org/ns/synapse"
+            key="hl724-tohl723-basic-response.xslt">
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                    xmlns:h="urn:hl7-org:v2xml"
+                    exclude-result-prefixes="h"
+                    version="1.0">
+
+        <xsl:template match="node()">
+            <xsl:copy>
+                <xsl:apply-templates select="@*|node()"/>
+            </xsl:copy>
+        </xsl:template>
+
+        <xsl:template match="@*">
+            <xsl:element name="{name()}" namespace="{namespace-uri()}">
+                <_>
+                    <xsl:value-of select="."/>
+                </_>
+            </xsl:element>
+        </xsl:template>
+
+        <xsl:template match="h:MSH.9">
+            <MSH.9 xmlns="urn:hl7-org:v2xml">
+                <xsl:apply-templates/>
+            </MSH.9>
+        </xsl:template>
+
+        <xsl:template match="h:MSG.1">
+            <CM_MSG.1 xmlns="urn:hl7-org:v2xml">
+                <xsl:value-of select="."/>
+            </CM_MSG.1>
+        </xsl:template>
+
+        <xsl:template match="h:MSG.2">
+            <CM_MSG.2 xmlns="urn:hl7-org:v2xml">
+                <xsl:value-of select="."/>
+            </CM_MSG.2>
+        </xsl:template>
+        <xsl:template match="h:MSH.12">
+            <MSH.12 xmlns="urn:hl7-org:v2xml">2.3</MSH.12>
+        </xsl:template>
+    </xsl:stylesheet>
+
+    <description/>
+</localEntry>
