@@ -8,7 +8,7 @@ These samples demonstrate the following integration scenarios related to HL7 usi
 
 * **Passthrough HL7-ER7 messages over MLLP protocol using HL7 inbound endpoint.**  
 
-* **Convert HL7 2.3 message format in to HL7 2.4 format and deliver to a destination **  
+* **Convert HL7 2.3 message format in to HL7 2.4 format and deliver to a destination.**  
 
 
 
