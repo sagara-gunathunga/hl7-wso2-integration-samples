@@ -79,7 +79,7 @@ Configure a receiving connection on HAPI TestPanel using port 9988 as shown in t
 Use the following docker run command
 
 ```
-docker run -it --rm  -p 9292:9292 -p 8290:8290 -p 20000:20000 -e HL7_BE_URL=hl7://host.docker.internal:9988 hl7-samples/wso2-integration
+docker run -it --rm  -p 9292:9292 -p 8290:8290 -p 20000:20000 -p 9393:9393 -p 9494:9494 -e HL7_BE_URL=hl7://host.docker.internal:9988  hl7-samples/wso2-integration
 ```
 
 
@@ -91,7 +91,7 @@ Use one of the steps to test each scenario.
 
 * [Passthrough HL7 messages over HTTP protocol using a proxy service](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-2.md)
 
-* [Passthrough HL7 messages over MLLP protocol using a Inbound Endpoint](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-3.md)
+* [Passthrough HL7 messages over MLLP protocol using an Inbound Endpoint](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-3.md)
 
 
 * [Asynchronous delivery of HL7 messages over MLLP protocol using WSO2 Message Store and Message Processors](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-4.md)
