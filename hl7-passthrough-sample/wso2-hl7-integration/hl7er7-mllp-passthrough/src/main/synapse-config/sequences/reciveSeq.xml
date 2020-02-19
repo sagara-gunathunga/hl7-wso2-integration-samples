@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<sequence xmlns="http://ws.apache.org/ns/synapse" name="reciveSeq">
-  <property name="HL7_RESULT_MODE" value="ACK" scope="axis2" /> 
-    <send/>
-</sequence>
