@@ -14,7 +14,7 @@ NOTE: Due to a limitation of handling HL7 acknowledgement this sample use custom
 
 ## Prerequisites
 
-* Build and run the sample backends and integration flows as described  [here.](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/README.md#how-to-build)
+* Build and run the sample backends and integration flows as described  [here.](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/README.md#how-to-build)
 
 
 
