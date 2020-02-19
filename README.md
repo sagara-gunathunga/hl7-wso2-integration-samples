@@ -8,6 +8,8 @@ These samples demonstrate the following integration scenarios related to HL7 usi
 
 * **Passthrough HL7-ER7 messages over MLLP protocol using HL7 inbound endpoint.**  
 
+* **Convert HL7 2.3 message format in to HL7 2.4 format and deliver to a destination **  
+
 
 
 ## Prerequisites
@@ -99,6 +101,8 @@ Use one of the steps to test each scenario.
 * [Asynchronous delivery of HL7 messages over MLLP protocol using WSO2 Message Store and Message Processors with acknowledgement processing](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-5.md)
 
 * [Mediation from REST/JSON to HL7/LLMP and back](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-6.md)
+
+* [Convert HL7 2.3 message format in to HL7 2.4 format and deliver to a destination](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/hl7-integration-sample/docs/example-7.md)
 
 
 
