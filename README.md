@@ -81,7 +81,7 @@ Configure a receiving connection on HAPI TestPanel using port 9988 as shown in t
 Use the following docker run command
 
 ```
-docker run -it --rm  -p 9292:9292 -p 8290:8290 -p 20000:20000 -p 9393:9393 -p 9494:9494 -p 9595:9595 -e HL7_BE_URL=hl7://host.docker.internal:9988  hl7-samples/wso2-integration
+docker run -it --rm -p 8280:8280  -p 9292:9292 -p 8290:8290 -p 20000:20000 -p 9393:9393 -p 9494:9494 -p 9595:9595 -e HL7_BE_URL=hl7://host.docker.internal:9988  hl7-samples/wso2-integration
 ```
 
 

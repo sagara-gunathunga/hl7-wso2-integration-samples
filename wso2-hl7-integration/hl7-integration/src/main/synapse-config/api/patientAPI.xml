@@ -48,4 +48,42 @@
             <send/>
         </outSequence>
     </resource>
+    <resource methods="GET" uri-template="/{uid}">
+        <inSequence>
+            <send>
+                <endpoint>
+                    <http method="get" uri-template="http://host.docker.internal:8080/patientmgt/{uri.var.uid}"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <payloadFactory media-type="json">
+                <format>{
+                    "resourceType": "Patient",  "id" : "$1",  "meta" : {    "versionId" : "1.0"},
+                    "identifier": [
+                    {  "use": "usual",      "label": "MRN",
+                    "system": "http://www.goodhealth.org/identifiers/mrn",
+                    "value": "123456"    }
+                    ],
+                    "name": [
+                    {  "family": ["$2"],
+                    "given": ["$3"],
+                    "suffix": [""]
+                    }  ],
+                    "gender": {"text": "$4"},
+                    "birthDate": "$5",
+                    "active": '$6'}
+                </format>
+                <args>
+                    <arg evaluator="json" expression="$.id"/>
+                    <arg evaluator="json" expression="$.familyname"/>
+                    <arg evaluator="json" expression="$.givenname"/>
+                    <arg evaluator="json" expression="$.gender"/>
+                    <arg evaluator="json" expression="$.dob"/>
+                    <arg evaluator="json" expression="$.active"/>
+                </args>
+            </payloadFactory>
+            <send/>
+        </outSequence>
+    </resource>
 </api>
