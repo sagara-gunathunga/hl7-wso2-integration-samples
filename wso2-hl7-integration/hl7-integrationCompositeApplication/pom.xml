@@ -15,6 +15,7 @@
 
   <properties>
     <com.example.hl7.integration.api_._healthAPI>capp/EnterpriseServiceBus</com.example.hl7.integration.api_._healthAPI>
+    <com.example.hl7.integration.api_._patientAPI>capp/EnterpriseServiceBus</com.example.hl7.integration.api_._patientAPI>
     <com.example.hl7.integration.proxy-service_._hl7PassthroughProxy>capp/EnterpriseServiceBus</com.example.hl7.integration.proxy-service_._hl7PassthroughProxy>
     <com.example.hl7.integration.proxy-service_._hl7MessageStoreProxy>capp/EnterpriseServiceBus</com.example.hl7.integration.proxy-service_._hl7MessageStoreProxy>
     <com.example.hl7.integration.proxy-service_._hl7MessageStoreWithReplyProxy>capp/EnterpriseServiceBus</com.example.hl7.integration.proxy-service_._hl7MessageStoreWithReplyProxy>
@@ -39,6 +40,12 @@
     <dependency>
       <groupId>com.example.hl7.integration.api</groupId>
       <artifactId>healthAPI</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.hl7.integration.api</groupId>
+      <artifactId>patientAPI</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

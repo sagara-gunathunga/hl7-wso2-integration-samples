@@ -2,6 +2,9 @@
     <artifact name="healthAPI" groupId="com.example.hl7.integration.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/healthAPI.xml</file>
     </artifact>
+    <artifact name="patientAPI" groupId="com.example.hl7.integration.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/patientAPI.xml</file>
+    </artifact>
     <artifact name="hl7PassthroughProxy" groupId="com.example.hl7.integration.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/hl7PassthroughProxy.xml</file>
     </artifact>

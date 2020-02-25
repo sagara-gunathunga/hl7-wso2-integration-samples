@@ -1,0 +1,51 @@
+<api xmlns="http://ws.apache.org/ns/synapse" name="patientAPI" context="/FIHR/Patient">
+    <resource methods="POST">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{"givenname":"$1",   "familyname":"$2",   "gender":"$3",   "dob":"$4",   "active":"$5"}</format>
+                <args>
+                    <arg evaluator="json" expression="$.name[0].given[0]"/>
+                    <arg evaluator="json" expression="$.name[0].family[0]"/>
+                    <arg evaluator="json" expression="$.gender.text"/>
+                    <arg evaluator="json" expression="$.birthDate"/>
+                    <arg evaluator="json" expression="$.active"/>
+                </args>
+            </payloadFactory>
+            <log level="full"/>
+            <send>
+                <endpoint>
+                    <address uri="http://host.docker.internal:8080/patientmgt/"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <payloadFactory media-type="json">
+                <format>{
+                    "resourceType": "Patient",  "id" : "$1",  "meta" : {    "versionId" : "1.0"},
+                    "identifier": [
+                      {  "use": "usual",      "label": "MRN",
+                         "system": "http://www.goodhealth.org/identifiers/mrn",
+                         "value": "123456"    }
+                                 ],
+                      "name": [
+                           {  "family": ["$2"],
+                               "given": ["$3"],
+                                "suffix": [""]
+                            }  ],
+                       "gender": {"text": "$4"},
+                       "birthDate": "$5",
+                       "active": '$6'}
+                 </format>
+                <args>
+                    <arg evaluator="json" expression="$.id"/>
+                    <arg evaluator="json" expression="$.familyname"/>
+                    <arg evaluator="json" expression="$.givenname"/>
+                    <arg evaluator="json" expression="$.gender"/>
+                    <arg evaluator="json" expression="$.dob"/>
+                    <arg evaluator="json" expression="$.active"/>
+                </args>
+            </payloadFactory>
+            <send/>
+        </outSequence>
+    </resource>
+</api>
