@@ -57,6 +57,11 @@
             </send>
         </inSequence>
         <outSequence>
+            <header name="Content-Type" value="application/json+fhir" scope="transport"/>
+<!--            <property name="messageType" value="application/json" scope="axis2"/>-->
+            <property name="messageType" value="application/json+fhir" scope="axis2" type="STRING"/>
+            <property name="ContentType" value="application/json+fhir" scope="axis2" type="STRING"/>
+            <property name="CONTENT_TYPE" value="application/json+fhir" scope="axis2" type="STRING"/>
             <payloadFactory media-type="json">
                 <format>{
                     "resourceType": "Patient",  "id" : "$1",  "meta" : {    "versionId" : "1.0"},
