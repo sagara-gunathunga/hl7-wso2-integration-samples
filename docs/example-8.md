@@ -30,11 +30,12 @@ curl -XPOST -H "Content-type: application/json" -d '{"id":"123", "givenname":"Jo
 ```shell
 curl http://localhost:8290/FIHR/Patient/173
 
+```
 
 
 * The HTTP client should show the following JSON response. 
 
-```
+```shell
 
 {
                     "resourceType": "Patient",  "id" : "811",  "meta" : {    "versionId" : "1.0"},
