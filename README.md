@@ -10,6 +10,8 @@ These samples demonstrate the following integration scenarios related to HL7 usi
 
 * **Convert HL7 2.3 message format in to HL7 2.4 format and deliver to a destination.**  
 
+* **Convert simple JSON message in to HL7 FHIR format and deliver to a destination.**  
+
 
 
 ## Prerequisites
@@ -32,6 +34,10 @@ Building the sample backend
 ```
 
 cd hl7backend
+
+mvn clean install
+
+cd patient-mgt
 
 mvn clean install
 
@@ -60,6 +66,9 @@ One of the following two options can be used to setup the HL7 test backend.
 ```
 
 docker run -it --rm -p 9988:9988 hl7-samples/hl7backend
+
+
+docker run -it --rm -p 8080:8080 hl7-samples/patient-mgt
 
 
 ```
@@ -103,6 +112,8 @@ Use one of the steps to test each scenario.
 * [Mediation from REST/JSON to HL7/LLMP and back](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/docs/example-6.md)
 
 * [Convert HL7 2.3 message format in to HL7 2.4 format and deliver to a destination](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/docs/example-7.md)
+
+* [Convert simple JSON message in to HL7 FHIR format and deliver to a destination.](https://github.com/sagara-gunathunga/hl7-wso2-integration-samples/blob/master/docs/example-8.md)
 
 
 
